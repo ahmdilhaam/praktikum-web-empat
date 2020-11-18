@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Image Picker</title>
+</head>
+<body>
+    <select onchange="image_picker(this.value)">
+        <option value="anak-ayam">Anak Ayam</option>
+        <option value="ayam">Ayam</option>
+        <option value="ikan-kurakura">Ikan dan Kura-kura</option>
+        <option value="ikan">Ikan</option>
+        <option value="kancil">Kancil</option>
+        <option value="kenari">kenari</option>
+    </select>
+    <br><br>
+    <img src="img/anak-ayam.jpg" id="img" style="max-width: 50%;" alt="Animal Picture">
+
+    <script>
+        function image_picker(val) {
+            let nama_file = val+'.jpg';
+            document.getElementById('img').src = 'img/'+nama_file;
+        }
+    </script>
+</body>
+</html>
